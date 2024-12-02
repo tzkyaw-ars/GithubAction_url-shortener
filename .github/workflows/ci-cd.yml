@@ -84,4 +84,4 @@ jobs:
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/url-shortener:latest
           docker stop url-shortener || true
           docker rm url-shortener || true
-          docker run -d --name url-shortener -p 80:5000 ${{ secrets.DOCKERHUB_USERNAME }}/url-shortener:latest
+          docker run -d --name url-shortener -p 8080:5000 ${{ secrets.DOCKERHUB_USERNAME }}/url-shortener:latest
